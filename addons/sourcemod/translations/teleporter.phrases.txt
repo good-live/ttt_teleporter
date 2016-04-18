@@ -1,11 +1,11 @@
 "Phrases"
 {
-	"Bought"
-	{
-		"en"		"[TTT] Use rightclick to safe your position and 2xF to teleport"
-	}
-	"Pos_Saved"
-	{
-		"en"		"[TTT] Position saved!"
-	}
+    "Bought"
+    {
+        "en"        "{orchid}[{green}T{darkred}T{blue}T{orchid}]{lightgreen} {darkred}Use rightclick to safe your position and 2xF to teleport"
+    }
+    "Pos_Saved"
+    {
+        "en"        "{orchid}[{green}T{darkred}T{blue}T{orchid}]{lightgreen} {darkred}Position saved!"
+    }
 }
