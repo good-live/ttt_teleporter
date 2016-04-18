@@ -1,0 +1,11 @@
+"Phrases"
+{
+	"Bought"
+	{
+		"en"		"[TTT] Use rightclick to safe your position and 2xF to teleport"
+	}
+	"Pos_Saved"
+	{
+		"en"		"[TTT] Position saved!"
+	}
+}
