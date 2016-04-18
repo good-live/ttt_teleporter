@@ -42,7 +42,7 @@ public void OnPluginStart()
 	InitDebugLog("teleporter_debug", "TTTT", ADMFLAG_ROOT);
 	LogDebug("Started");
 	
-	g_cPrice = CreateConVar("ttt_teleporter_price", "5000", "The price for the teleporter");
+	g_cPrice = CreateConVar("ttt_teleporter_price", "25000", "The price for the teleporter");
 	g_cName = CreateConVar("ttt_teleporter_name", "Teleporter", "The name of the Teleporter in the Shop");
 	g_cMode = CreateConVar("ttt_teleporter_mode", "1", "Who is able to buy the teleporter? 1=Traitor 2=Detective 4=Innocent (Add them if you want)");
 	
