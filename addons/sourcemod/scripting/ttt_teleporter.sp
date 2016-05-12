@@ -13,6 +13,7 @@
 #include <sdktools>
 #include <logdebug>
 #include <ttt>
+#include <ttt_shop>
 #include <cstrike>
 #include <sdkhooks>
 #include <multicolors>
