@@ -30,6 +30,7 @@ public Plugin myinfo =
 ConVar g_cPrice;
 ConVar g_cName;
 ConVar g_cMode;
+ConVar g_cPrio;
 
 bool g_bHasTeleporter[MAXPLAYERS + 1];
 bool g_bHasPressed[MAXPLAYERS + 1];
@@ -46,6 +47,7 @@ public void OnPluginStart()
 	g_cPrice = CreateConVar("ttt_teleporter_price", "25000", "The price for the teleporter");
 	g_cName = CreateConVar("ttt_teleporter_name", "Teleporter", "The name of the Teleporter in the Shop");
 	g_cMode = CreateConVar("ttt_teleporter_mode", "1", "Who is able to buy the teleporter? 1=Traitor 2=Detective 4=Innocent (Add them if you want)");
+	g_cPrio = CreateConVar("ttt_teleporter_prio", "100", "Priority for the teleporter (High prio = at the beginning of the menu");
 	
 	AddCommandListener(Command_Weapon, "+lookatweapon");
 	
@@ -159,13 +161,13 @@ public void OnAllPluginsLoaded()
 		g_cName.GetString(sName, sizeof(sName));
 		
 		if (iMode & BUY_TRAITOR)
-			TTT_RegisterCustomItem("teleporter_t", sName, iPrice, TTT_TEAM_TRAITOR);
+			TTT_RegisterCustomItem("teleporter_t", sName, iPrice, TTT_TEAM_TRAITOR, g_cPrio.IntValue);
 		
 		if (iMode & BUY_DETECTIVE)
-			TTT_RegisterCustomItem("teleporter_d", sName, iPrice, TTT_TEAM_DETECTIVE);
+			TTT_RegisterCustomItem("teleporter_d", sName, iPrice, TTT_TEAM_DETECTIVE, g_cPrio.IntValue);
 		
 		if (iMode & BUY_INNOCENT)
-			TTT_RegisterCustomItem("teleporter_i", sName, iPrice, TTT_TEAM_INNOCENT);
+			TTT_RegisterCustomItem("teleporter_i", sName, iPrice, TTT_TEAM_INNOCENT, g_cPrio.IntValue);
 	}
 }
 
